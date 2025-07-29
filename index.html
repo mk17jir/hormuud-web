@@ -20,31 +20,38 @@
 </head>
 <body>
 
-  <nav class="navbar-custom">
-    <!-- Logo -->
-    <div class="navbar-logo">
-      <img src="./images/Hormuud-logo.svg" alt="Hormuud Logo">
-    </div>
+ <nav class="navbar-custom">
+  <!-- Logo -->
+  <div class="navbar-logo">
+    <img src="./images/Hormuud-logo.svg" alt="Hormuud Logo">
+  </div>
 
-    <!-- Menu -->
-    <div class="navbar-menu">
-      <a href="#" class="active">Home</a>
-      <a href="#" >Personal <i class="fa-solid fa-angle-down"></i></a>
-      <a href="#" >Business <i class="fa-solid fa-angle-down"></i></a>
-      <a href="#" >Who We Are <i class="fa-solid fa-angle-down"></i></a>
-      <a href="#" >Media <i class="fa-solid fa-angle-down"></i></a>
-      <a href="#">Contact Us </a>
-    </div>
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <!-- Icons -->
-    <div class="navbar-icons">
-      <i class="fa-regular fa-heart"></i>
-      <div style="position: relative;">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span class="cart-badge">0</span>
-      </div>
+  <!-- Menu -->
+  <div class="navbar-menu" id="navbarMenu">
+    <a href="#" class="active">Home</a>
+    <a href="#">Personal <i class="fa-solid fa-angle-down"></i></a>
+    <a href="#">Business <i class="fa-solid fa-angle-down"></i></a>
+    <a href="#">Who We Are <i class="fa-solid fa-angle-down"></i></a>
+    <a href="#">Media <i class="fa-solid fa-angle-down"></i></a>
+    <a href="#">Contact Us</a>
+  </div>
+
+  <!-- Icons -->
+  <div class="navbar-icons">
+    <i class="fa-regular fa-heart"></i>
+    <div style="position: relative;">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span class="cart-badge">0</span>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- main and hero section -->
 
@@ -421,6 +428,14 @@
         </div>
       </div>
     </footer>
-  
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navbarMenu = document.getElementById('navbarMenu');
+
+  hamburger.addEventListener('click', () => {
+    navbarMenu.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
